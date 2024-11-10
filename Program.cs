@@ -11,6 +11,9 @@ builder.Services.AddDbContext<DataContext>(opt =>
 });
 builder.Services.AddCors();
 
+// Register the Background Service
+builder.Services.AddHostedService<PeriodicDbEventService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

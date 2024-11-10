@@ -12,8 +12,6 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DbEvent>>> GetDbEvents()
         {
-            Console.WriteLine(context);
-            Console.WriteLine(context.DbEvents);
             var dbEvents = await context.DbEvents.ToListAsync();
             return dbEvents;
         }
