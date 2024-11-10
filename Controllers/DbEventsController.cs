@@ -7,12 +7,12 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class DbEventsController(DataContext context) : ControllerBase
+    public class DbEventsController(IDbEventRepository dbEventRepository) : ControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<DbEvent>>> GetDbEvents()
+        public async Task<IEnumerable<DbEvent>> GetDbEvents()
         {
-            var dbEvents = await context.DbEvents.ToListAsync();
+            var dbEvents = await dbEventRepository.GetDbEventsAsync();
             return dbEvents;
         }
     }
