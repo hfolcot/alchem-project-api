@@ -1,7 +1,7 @@
 API and DB for management console.
 
 ## Pre-requisites
-Microsoft .NET 8
+(Microsoft .NET 8)[https://dotnet.microsoft.com/en-us/download]
 
 ## About the project
 This project uses .NET 8 with Entity Framework.
