@@ -1,8 +1,9 @@
 API and DB for management console.
 
-Pre-requisites:
+## Pre-requisites
 Microsoft .NET 8
 
+## About the project
 This project uses .NET 8 with Entity Framework.
 
 The database uses SQLite, which would not be suitable for production but suffices for this demo.
