@@ -8,7 +8,7 @@ public class PeriodicDbEventService : BackgroundService
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly IHubContext<DbEventHub> _hubContext;
-    private readonly TimeSpan _interval = TimeSpan.FromSeconds(10);
+    private readonly TimeSpan _interval = TimeSpan.FromSeconds(30);
 
     public PeriodicDbEventService(IServiceProvider serviceProvider, IHubContext<DbEventHub> hubContext)
     {
